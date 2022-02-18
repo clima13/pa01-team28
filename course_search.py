@@ -60,6 +60,11 @@ def topmenu():
                 instructor = input("enter instructor's lastname: ")
                 schedule = schedule.lastname([instructor])
 
+        # Nathan Cai 7e
+        elif command in ['w', 'waiting']:
+            limit = input("Enter the maximum witinglist size: ")
+            schedule = schedule.limit(limit)
+
         else:
             print('command',command,'is not supported')
             continue

@@ -49,4 +49,9 @@ class Schedule():
         else:
             print("can't sort by "+str(field)+" yet")
             return self
- 
+    
+    # Nathan Cai Question 6c
+    def limit(self,limit):
+        '''limit returns a list of all course under a certain size'''
+        return Schedule([course for course in self.courses if course['waiting'] <= int(limit)])
+        
